@@ -1,0 +1,331 @@
+$link-color: grey;
+$link-hover-color: black;
+$button-bg-color: transparent;
+$font-family: "Poppins", sans-serif;
+$button-hover-color: black;
+$button-hover-opacity: 1;
+$blue-button-bg-color: #12c3f4;
+$blue-button-hover-color: rgb(184, 240, 246);
+$blue-button-color: white;
+$purple-background: rgb(43, 6, 91);
+
+@mixin blue-start-button ($border-radius){
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: $border-radius;
+    color: white;
+    background-color: $blue-button-bg-color;
+}
+
+@mixin extra-positioning ($marg-t,$marg-r,$marg-b,$marg-l){
+  flex: 1;
+  background-color: white;
+  margin: $marg-t $marg-r $marg-b $marg-l;
+  border-radius: 5px;
+}
+
+@mixin extra-image(){
+  position: absolute;
+  margin-top: -35px;
+  margin-left: 20px;
+  background-color: $purple-background;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+@mixin extra-text(){
+  padding: 20px;
+    h4{
+      margin-top: 40px;
+    }
+    p{
+      font-size: 12px;
+      color: $link-color;
+    }
+}
+
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, white 50%, rgb(237, 235, 235) 50%);
+}
+
+.containerOne{
+    margin: 0px 150px 0px 150px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+
+  li {
+    margin-right: 1rem;
+
+    a {
+      color: $link-color;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      transition: color 0.3s;
+      font-size: small;
+
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 0.5rem;
+
+  .login{
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: $button-bg-color;
+    color: $link-color;
+    transition: color 0.3s, opacity 0.3s;
+  }
+
+  .signup{
+    @include blue-start-button(18px);
+  }
+    
+    .login {
+        &:hover {
+          color: $button-hover-color;
+        }
+      }
+    
+      .signup {
+        &:hover {
+          background-color: $blue-button-hover-color;
+        }
+      }
+  
+}
+
+.getStarted{
+  @include blue-start-button(18px);
+
+  &:hover {
+      background-color: $blue-button-hover-color;
+    }
+}
+
+.displayStart{
+    padding-top: 40px;
+    width: 40%;
+    
+    img{
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        top: 13%;
+        max-height: 400px;
+    }
+    .display-sub-container{
+        
+        h1{
+            font-size: 45px;
+            margin-bottom: 0px;
+        }
+        p{
+            margin-top: 0px;
+            color: $link-color;
+        }
+    }
+}
+
+.shortenLinkContainer{
+    margin-top: 150px;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background-color: $purple-background;
+
+    .input-container{
+      width: 90%;
+      padding-top: 22px;
+          #shortenInput{
+            margin-left: 50px;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            width: 80%;
+            margin-right: 10px;
+        }
+        span{
+          padding-left: 50px;
+          color: red;
+          font-size: 15px;
+          visibility: hidden;
+          font-style: italic;
+        }
+    }
+    #shortenItButton{
+        @include blue-start-button(6px);
+        padding: 15px;
+        margin-right: 50px;
+        width: 20%;
+
+        &:hover {
+          background-color: $blue-button-hover-color;
+        }
+    }
+}
+
+.url-history{
+  #url-list{
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 12px;
+
+    li{
+      margin: 15px 0px 15px 0px;
+      background-color: white;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 15px;
+      border-radius: 3px;
+
+
+      a{
+        text-decoration: none;
+        padding-right: 15px;
+      }
+      button{
+        @include blue-start-button(6px);
+        margin-right: 15px;
+        min-width: 75px;
+        max-width: 75px;
+        &:hover {
+          background-color: $blue-button-hover-color;
+        }
+      }
+    }
+  }
+}
+
+.statistics-display{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
+  text-align: center;
+  
+  h1{
+    margin: 10px;
+  }
+  p{
+    color: $link-color;
+  }
+}
+
+.extra-usage{
+  display: flex;
+  margin-bottom: 200px;
+  #extraOne{
+    @include extra-positioning(0px, 10px, 0px, 0px);
+    img{
+      @include extra-image()
+    }
+    #extraTextOne{
+      @include extra-text()
+    }
+  }
+  #extraTwo{
+    @include extra-positioning(40px, 10px, -40px, 10px);
+    img{
+      @include extra-image()
+    }
+    #extraTextTwo{
+      @include extra-text()
+    }
+  }
+  #extraThree{
+    @include extra-positioning(80px, 0px, -80px, 10px);
+    img{
+      @include extra-image()
+    }
+    #extraTextThree{
+      @include extra-text()
+    }
+
+  }
+}
+
+.boost-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $purple-background;
+  color: white;
+  flex-direction: column;
+  height:200px;
+  width: 100%;
+}
+
+.footer{
+  display: flex; 
+  background-color: black;
+  color: white;
+  h2{
+    flex: 2;
+    margin: 70px 70px 150px 100px 
+  } 
+
+  ul{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    list-style-type: none;
+    li{
+      a {
+        color: $link-color;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: small;
+  
+        &:hover {
+          color: $blue-button-bg-color;
+        }
+      }
+    }
+  }
+  .icons{
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 40px;
+    img{
+      padding: 5px;
+      &:hover {
+        background: $blue-button-bg-color;
+      }
+    }
+  
+  }
+}

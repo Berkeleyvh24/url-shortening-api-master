@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <div class="containerOne">
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><h3>Shortly</h3></li>
+        <li><a href="#home">Features</a></li>
+        <li><a href="#about">Prices</a></li>
+        <li><a href="#contact">Resources</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <button class="login">Login</button>
+        <button class="signup">Sign Up</button>
+      </div>
+    </nav>
+    <div class="displayStart">
+      <img id="workingImg" src="images/illustration-working.svg" alt="Image">
+      <div class="display-sub-container">
+        <h1>More than just shorter links</h1>
+        <p>Build your brand’s recognition and get detailed insights 
+          on how your links are performing.
+        </p>
+        <button class="getStarted">Get Started</button>
+      </div>
+    </div>
+    
+    <div class="shortenLinkContainer">
+      <div class="input-container">
+        <input  type='text' title="Shorten" placeholder="Shorten a link here..." id="shortenInput"/>
+        <span id="inputError">Please add correct link</span>
+      </div>
+      <button id="shortenItButton">Shorten it!</button>
+    </div>
+    <div class="url-history">
+      <ul id="url-list">
+      </ul>
+    </div>
+    <div class="statistics-display">
+      <h1>
+        Advanced Statistics
+      </h1>
+      <p>
+        Track how your links are performing across the web with our 
+        advanced statistics dashboard.          
+      </p>
+    </div>
+    <div class="extra-usage">
+      <div id="extraOne">
+        <img src="images/icon-brand-recognition.svg" alt="brand">
+        <div id="extraTextOne">
+          <h4>Brand Recognition</h4>
+          <p> Boost your brand recognition with each click. Generic links don’t 
+            mean a thing. Branded links help instil confidence in your content.          
+          </p>
+        </div>
+      </div>
+      <div id="extraTwo">
+        <img src="images/icon-detailed-records.svg" alt="brand">
+        <div id="extraTextTwo">
+          <h4>Detailed Records</h4>
+          <p>
+            Gain insights into who is clicking your links. Knowing when and where 
+            people engage with your content helps inform better decisions.  
+          </p>
+        </div>
+      </div>      
+      <div id="extraThree">
+        <img src="images/icon-fully-customizable.svg" alt="brand">
+        <div id="extraTextThree">
+          <h4>Fully Customizable</h4>
+          <p> Improve brand awareness and content discoverability through customizable 
+            links, supercharging audience engagement.  
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="boost-container">
+  <h2>Boost your links today</h2>
+  <button class="getStarted">Get Started</button>
+  </div>
+<div class="footer">
+  <h2>Shortly</h2>
+  <ul>
+    <li><h4>Features</h4></li>
+    <li><a href="#Link Shortening">Link Shortening</a></li>
+    <li><a href="#Branded Links">Branded Links</a></li>
+    <li><a href="#Analytics">Analytics</a></li> 
+  </ul>
+  <ul>
+    <li><h4>Resources</h4></li>
+    <li><a href="#Blog">Blog</a></li>
+    <li><a href="#Developers">Developers</a></li>
+    <li><a href="#Support">Support</a></li>       
+  </ul>
+  <ul>
+    <li><h4>Company</h4></li>
+    <li><a href="#About">About</a></li>
+    <li><a href="#Our Team">Our Team</a></li>
+    <li><a href="#Careers">Careers</a></li>
+    <li><a href="#Contact">Contact</a></li>
+  </ul>
+  <div class="icons">
+    <img src="/images/icon-facebook.svg" alt="Icon description"></i>
+    <img src="/images/icon-twitter.svg" alt="Icon description"></i>
+    <img src="/images/icon-pinterest.svg" alt="Icon description"></i>
+    <img src="/images/icon-instagram.svg" alt="Icon description"></i>
+  </div>
+  </div>
+<script src="index.js"></script>
+</body>
+</html>

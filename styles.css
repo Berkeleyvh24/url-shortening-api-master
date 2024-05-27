@@ -1,0 +1,318 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, white 50%, rgb(237, 235, 235) 50%);
+}
+
+.containerOne {
+  margin: 0px 150px 0px 150px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.nav-links li {
+  margin-right: 1rem;
+}
+.nav-links li a {
+  color: grey;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s;
+  font-size: small;
+}
+.nav-links li a:hover {
+  color: black;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+.nav-buttons .login {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: transparent;
+  color: grey;
+  transition: color 0.3s, opacity 0.3s;
+}
+.nav-buttons .signup {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 18px;
+  color: white;
+  background-color: #12c3f4;
+}
+.nav-buttons .login:hover {
+  color: black;
+}
+.nav-buttons .signup:hover {
+  background-color: rgb(184, 240, 246);
+}
+
+.getStarted {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 18px;
+  color: white;
+  background-color: #12c3f4;
+}
+.getStarted:hover {
+  background-color: rgb(184, 240, 246);
+}
+
+.displayStart {
+  padding-top: 40px;
+  width: 40%;
+}
+.displayStart img {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 13%;
+  max-height: 400px;
+}
+.displayStart .display-sub-container h1 {
+  font-size: 45px;
+  margin-bottom: 0px;
+}
+.displayStart .display-sub-container p {
+  margin-top: 0px;
+  color: grey;
+}
+
+.shortenLinkContainer {
+  margin-top: 150px;
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(43, 6, 91);
+}
+.shortenLinkContainer .input-container {
+  width: 90%;
+  padding-top: 22px;
+}
+.shortenLinkContainer .input-container #shortenInput {
+  margin-left: 50px;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  width: 80%;
+  margin-right: 10px;
+}
+.shortenLinkContainer .input-container span {
+  padding-left: 50px;
+  color: red;
+  font-size: 15px;
+  visibility: hidden;
+  font-style: italic;
+}
+.shortenLinkContainer #shortenItButton {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  color: white;
+  background-color: #12c3f4;
+  padding: 15px;
+  margin-right: 50px;
+  width: 20%;
+}
+.shortenLinkContainer #shortenItButton:hover {
+  background-color: rgb(184, 240, 246);
+}
+
+.url-history #url-list {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 12px;
+}
+.url-history #url-list li {
+  margin: 15px 0px 15px 0px;
+  background-color: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 15px;
+  border-radius: 3px;
+}
+.url-history #url-list li a {
+  text-decoration: none;
+  padding-right: 15px;
+}
+.url-history #url-list li button {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  color: white;
+  background-color: #12c3f4;
+  margin-right: 15px;
+  min-width: 75px;
+  max-width: 75px;
+}
+.url-history #url-list li button:hover {
+  background-color: rgb(184, 240, 246);
+}
+
+.statistics-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
+  text-align: center;
+}
+.statistics-display h1 {
+  margin: 10px;
+}
+.statistics-display p {
+  color: grey;
+}
+
+.extra-usage {
+  display: flex;
+  margin-bottom: 200px;
+}
+.extra-usage #extraOne {
+  flex: 1;
+  background-color: white;
+  margin: 0px 10px 0px 0px;
+  border-radius: 5px;
+}
+.extra-usage #extraOne img {
+  position: absolute;
+  margin-top: -35px;
+  margin-left: 20px;
+  background-color: rgb(43, 6, 91);
+  padding: 15px;
+  border-radius: 50%;
+}
+.extra-usage #extraOne #extraTextOne {
+  padding: 20px;
+}
+.extra-usage #extraOne #extraTextOne h4 {
+  margin-top: 40px;
+}
+.extra-usage #extraOne #extraTextOne p {
+  font-size: 12px;
+  color: grey;
+}
+.extra-usage #extraTwo {
+  flex: 1;
+  background-color: white;
+  margin: 40px 10px -40px 10px;
+  border-radius: 5px;
+}
+.extra-usage #extraTwo img {
+  position: absolute;
+  margin-top: -35px;
+  margin-left: 20px;
+  background-color: rgb(43, 6, 91);
+  padding: 15px;
+  border-radius: 50%;
+}
+.extra-usage #extraTwo #extraTextTwo {
+  padding: 20px;
+}
+.extra-usage #extraTwo #extraTextTwo h4 {
+  margin-top: 40px;
+}
+.extra-usage #extraTwo #extraTextTwo p {
+  font-size: 12px;
+  color: grey;
+}
+.extra-usage #extraThree {
+  flex: 1;
+  background-color: white;
+  margin: 80px 0px -80px 10px;
+  border-radius: 5px;
+}
+.extra-usage #extraThree img {
+  position: absolute;
+  margin-top: -35px;
+  margin-left: 20px;
+  background-color: rgb(43, 6, 91);
+  padding: 15px;
+  border-radius: 50%;
+}
+.extra-usage #extraThree #extraTextThree {
+  padding: 20px;
+}
+.extra-usage #extraThree #extraTextThree h4 {
+  margin-top: 40px;
+}
+.extra-usage #extraThree #extraTextThree p {
+  font-size: 12px;
+  color: grey;
+}
+
+.boost-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(43, 6, 91);
+  color: white;
+  flex-direction: column;
+  height: 200px;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  background-color: black;
+  color: white;
+}
+.footer h2 {
+  flex: 2;
+  margin: 70px 70px 150px 100px;
+}
+.footer ul {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  list-style-type: none;
+}
+.footer ul li a {
+  color: grey;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: small;
+}
+.footer ul li a:hover {
+  color: #12c3f4;
+}
+.footer .icons {
+  display: inline-block;
+  margin-top: 30px;
+  margin-right: 40px;
+}
+.footer .icons img {
+  padding: 5px;
+}
+.footer .icons img:hover {
+  background: #12c3f4;
+}/*# sourceMappingURL=styles.css.map */
